@@ -41,12 +41,12 @@ namespace HotelListing.Repository
                 query = orderBy(query);
             }
 
-            return await query.AsNoTracking().ToListAsync();
+            return await query.ToListAsync();
         }
 
         public async Task<T?> GetAsync(Expression<Func<T, bool>> predicate)
         {
-            return await dbSet.AsNoTracking().FirstOrDefaultAsync(predicate);
+            return await dbSet.FirstOrDefaultAsync(predicate);
         }
 
         public async Task Insert(T entity)

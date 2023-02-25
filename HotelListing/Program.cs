@@ -1,5 +1,7 @@
 using HotelListing.Configurations;
 using HotelListing.Data;
+using HotelListing.IRepository;
+using HotelListing.Repository;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -14,7 +16,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddAutoMapper(typeof(MapperInitializer));
 
-builder.Services.AddControllers();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+builder.Services.AddControllers().AddNewtonsoftJson(option => option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

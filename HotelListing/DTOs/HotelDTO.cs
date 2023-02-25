@@ -5,7 +5,7 @@ namespace HotelListing.DTOs
     public class HotelDTO : CreateHotelDTO
     {
         public int Id { get; set; }
-        public CountryDTO Country { get; set; }
+        public WorldCountryDTO Country { get; set; }
     }
 
     public class CreateHotelDTO
