@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using HotelListing.DTOs;
 using HotelListing.IRepository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelListing.Controllers
@@ -80,5 +81,39 @@ namespace HotelListing.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
+        [HttpPut("{id:int}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> UpdateCountryAsync(int id, [FromBody] UpdateCountryDTO countryDTO)
+        {
+            if (!ModelState.IsValid || id < 1)
+            {
+                return BadRequest(ModelState.Select(x => x.Value.Errors).ToList());
+            }
+
+            try
+            {
+                var country = await unitOfWork.Countries.GetAsync(c => c.Id == id);
+                if (country is null)
+                {
+                    logger.LogError($"Invalid UPDATE attempt in {nameof(UpdateCountryAsync)}");
+                    return BadRequest("Submitted data is invalid");
+                }
+
+                mapper.Map(source: countryDTO, destination: country);
+                await unitOfWork.SaveAsync();
+
+                return NoContent();
+            }
+            catch (Exception exc)
+            {
+                logger.LogError(exc, $"Something went wrong in the {nameof(UpdateCountryAsync)}: {Environment.NewLine}{exc.Message}");
+                return StatusCode(500, "Internal Server Error. Please try later.");
+            }
+        }
+
+        
     }
 }

@@ -12,7 +12,7 @@ namespace HotelListing.DTOs
     public class CountryDTO : CreateCountryDTO
     {
         public int Id { get; set; }
-        public IList<HotelDTO> Hotels { get; set; }
+        public IList<CoutryHotelDTO> Hotels { get; set; }
     }
 
     public class CreateCountryDTO
@@ -24,5 +24,10 @@ namespace HotelListing.DTOs
         [Required]
         [StringLength(2, ErrorMessage = "Country code is too long")]
         public string Code { get; set; }
+    }
+
+    public class UpdateCountryDTO : CreateCountryDTO
+    {
+        public IList<UpsertHotelDTO> Hotels { get; set; }
     }
 }
