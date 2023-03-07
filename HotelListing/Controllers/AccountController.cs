@@ -37,29 +37,21 @@ namespace HotelListing.Controllers
                 return BadRequest(ModelState);
             }
 
-            try
+            var user = mapper.Map<ApiUser>(userDTO);
+            user.UserName = userDTO.Email;
+            var result = await userManager.CreateAsync(user, userDTO.Password);
+            if (!result.Succeeded)
             {
-                var user = mapper.Map<ApiUser>(userDTO);
-                user.UserName = userDTO.Email;
-                var result = await userManager.CreateAsync(user, userDTO.Password);
-                if (!result.Succeeded)
+                result.Errors.ToList().ForEach(error =>
                 {
-                    result.Errors.ToList().ForEach(error =>
-                    {
-                        ModelState.AddModelError(error.Code, error.Description);
-                    });
-                    
-                    return BadRequest(ModelState);
-                }
-                await userManager.AddToRolesAsync(user, userDTO.Roles);
+                    ModelState.AddModelError(error.Code, error.Description);
+                });
 
-                return Accepted();
+                return BadRequest(ModelState);
             }
-            catch (Exception ex)
-            {
-                logger.LogError(ex, $"Something went wrong in the {nameof(RegisterAsync)}: {Environment.NewLine}{ex.Message}");
-                return StatusCode(500, "Internal Server Error. Please try later.");
-            }
+            await userManager.AddToRolesAsync(user, userDTO.Roles);
+
+            return Accepted();
         }
 
         [HttpPost("Login")]
@@ -75,21 +67,12 @@ namespace HotelListing.Controllers
                 return BadRequest(ModelState);
             }
 
-            try
+            if (!await authManager.ValidateUserAsync(userDTO))
             {
-                if (!await authManager.ValidateUserAsync(userDTO))
-                {
-                    return Unauthorized();
-                }
+                return Unauthorized();
+            }
 
-                return Accepted(new { Token = await authManager.CreateTokenAsync()});
-            }
-            catch (Exception ex)
-            {
-                logger.LogError(ex, $"Something went wrong in the {nameof(LoginAsync)}: {Environment.NewLine}{ex.Message}");
-                return StatusCode(500, "Internal Server Error. Please try later.");
-            }
+            return Accepted(new { Token = await authManager.CreateTokenAsync() });
         }
-
     }
 }

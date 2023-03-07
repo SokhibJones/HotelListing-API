@@ -6904,3 +6904,4 @@ WHERE [c].[Id] = @__p_0
 2023-03-02 21:47:27.092 +05:00 [INF] Executed action HotelListing.Controllers.HotelController.AllHotelsAsync (HotelListing) in 30.3663ms
 2023-03-02 21:47:27.092 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.AllHotelsAsync (HotelListing)'
 2023-03-02 21:47:27.092 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Hotel - - - 200 626 application/json;+charset=utf-8 33.2769ms
+2023-03-02 22:08:51.239 +05:00 [INF] Application is shutting down...

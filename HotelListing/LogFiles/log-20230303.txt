@@ -1,0 +1,1771 @@
+2023-03-03 16:21:36.969 +05:00 [INF] User profile is available. Using 'C:\Users\Sokhibjon Zamonov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-03-03 16:21:39.357 +05:00 [INF] Now listening on: https://localhost:7294
+2023-03-03 16:21:39.358 +05:00 [INF] Now listening on: http://localhost:5281
+2023-03-03 16:21:39.362 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-03 16:21:39.364 +05:00 [INF] Hosting environment: Development
+2023-03-03 16:21:39.364 +05:00 [INF] Content root path: C:\Users\Sokhibjon Zamonov\Documents\MyData\Udemy\ApiProjects\HotelListing
+2023-03-03 16:21:47.150 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/swagger/index.html - -
+2023-03-03 16:21:48.846 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/swagger/index.html - - - 200 - text/html;charset=utf-8 1708.5902ms
+2023-03-03 16:21:48.940 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/_framework/aspnetcore-browser-refresh.js - -
+2023-03-03 16:21:48.940 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/_vs/browserLink - -
+2023-03-03 16:21:49.040 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 99.6000ms
+2023-03-03 16:21:49.521 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 580.9709ms
+2023-03-03 16:21:49.772 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/swagger/v1/swagger.json - -
+2023-03-03 16:21:50.773 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1001.4043ms
+2023-03-03 16:21:59.916 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country/WorldCountries - -
+2023-03-03 16:22:00.342 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:22:00.510 +05:00 [INF] Route matched with {action = "WorldCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountriesAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:22:18.974 +05:00 [INF] Executed DbCommand (316ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 16:22:19.449 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-03-03 16:22:19.453 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-03-03 16:22:19.644 +05:00 [INF] Executed DbCommand (148ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 16:22:19.742 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.WorldCountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 16:22:20.171 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing) in 19647.7699ms
+2023-03-03 16:22:20.173 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:22:20.222 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country/WorldCountries - - - 200 415 application/json;+charset=utf-8 20305.5921ms
+2023-03-03 16:23:17.599 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=2 - -
+2023-03-03 16:23:17.617 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:23:17.619 +05:00 [INF] Route matched with {action = "WorldCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountriesAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:23:18.120 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 16:23:18.158 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-03-03 16:23:18.159 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-03-03 16:23:18.180 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+2023-03-03 16:23:18.186 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.WorldCountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 16:23:18.191 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing) in 570.7141ms
+2023-03-03 16:23:18.191 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:23:18.193 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=2 - - - 200 400 application/json;+charset=utf-8 596.8227ms
+2023-03-03 16:23:25.099 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=3 - -
+2023-03-03 16:23:25.110 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:23:25.111 +05:00 [INF] Route matched with {action = "WorldCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountriesAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:23:25.232 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 16:23:25.266 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 16:23:25.267 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.WorldCountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 16:23:25.268 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing) in 157.3355ms
+2023-03-03 16:23:25.269 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:23:25.270 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=3 - - - 200 409 application/json;+charset=utf-8 171.2509ms
+2023-03-03 16:23:34.321 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=4 - -
+2023-03-03 16:23:34.323 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:23:34.323 +05:00 [INF] Route matched with {action = "WorldCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountriesAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:23:34.335 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 16:23:34.379 +05:00 [INF] Executed DbCommand (16ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 16:23:34.381 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.WorldCountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 16:23:34.384 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing) in 60.1531ms
+2023-03-03 16:23:34.384 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:23:34.386 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=4 - - - 200 433 application/json;+charset=utf-8 64.0945ms
+2023-03-03 16:23:43.616 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=5 - -
+2023-03-03 16:23:43.618 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:23:43.618 +05:00 [INF] Route matched with {action = "WorldCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountriesAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:23:43.643 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 16:23:43.670 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 16:23:43.671 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.WorldCountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 16:23:43.672 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing) in 54.19ms
+2023-03-03 16:23:43.673 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:23:43.674 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=5 - - - 200 432 application/json;+charset=utf-8 57.4521ms
+2023-03-03 16:23:59.836 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=5&PageSize=100 - -
+2023-03-03 16:23:59.837 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:23:59.838 +05:00 [INF] Route matched with {action = "WorldCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountriesAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:23:59.855 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 16:23:59.885 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 16:23:59.886 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.WorldCountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 16:23:59.887 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing) in 48.9585ms
+2023-03-03 16:23:59.887 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:23:59.888 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=5&PageSize=100 - - - 200 1932 application/json;+charset=utf-8 51.9109ms
+2023-03-03 16:24:38.392 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=5&PageSize=60 - -
+2023-03-03 16:24:38.394 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:24:38.402 +05:00 [INF] Route matched with {action = "WorldCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountriesAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:24:38.419 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 16:24:38.443 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 16:24:38.444 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.WorldCountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 16:24:38.445 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing) in 35.4713ms
+2023-03-03 16:24:38.445 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:24:38.445 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=5&PageSize=60 - - - 200 1932 application/json;+charset=utf-8 53.0296ms
+2023-03-03 16:24:57.428 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=5&PageSize=20 - -
+2023-03-03 16:24:57.428 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:24:57.429 +05:00 [INF] Route matched with {action = "WorldCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountriesAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:24:57.528 +05:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 16:24:57.553 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 16:24:57.555 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.WorldCountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 16:24:57.555 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing) in 126.1381ms
+2023-03-03 16:24:57.556 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:24:57.556 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=5&PageSize=20 - - - 200 839 application/json;+charset=utf-8 128.4410ms
+2023-03-03 16:25:42.664 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=4&PageSize=20 - -
+2023-03-03 16:25:42.665 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:25:42.665 +05:00 [INF] Route matched with {action = "WorldCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountriesAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:25:42.721 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 16:25:42.751 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 16:25:42.752 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.WorldCountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 16:25:42.753 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing) in 87.2115ms
+2023-03-03 16:25:42.753 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:25:42.754 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=4&PageSize=20 - - - 200 860 application/json;+charset=utf-8 89.4359ms
+2023-03-03 16:25:55.989 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=4&PageSize=10 - -
+2023-03-03 16:25:55.990 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:25:55.990 +05:00 [INF] Route matched with {action = "WorldCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountriesAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:25:56.035 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 16:25:56.057 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 16:25:56.058 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.WorldCountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 16:25:56.059 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing) in 68.1086ms
+2023-03-03 16:25:56.059 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:25:56.060 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=4&PageSize=10 - - - 200 433 application/json;+charset=utf-8 70.8726ms
+2023-03-03 16:26:12.146 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=0&PageSize=10 - -
+2023-03-03 16:26:12.146 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:26:12.146 +05:00 [INF] Route matched with {action = "WorldCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountriesAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:26:12.839 +05:00 [ERR] Something went wrong in the WorldCountriesAsync: 
+Specified argument was out of the range of valid values. (Parameter 'pageNumber = 0. PageNumber cannot be below 1.')
+System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'pageNumber = 0. PageNumber cannot be below 1.')
+   at X.PagedList.PagedListExtensions.ToPagedListAsync[T](IQueryable`1 superset, Int32 pageNumber, Int32 pageSize, Nullable`1 totalSetCount, CancellationToken cancellationToken)
+   at X.PagedList.PagedListExtensions.ToPagedListAsync[T](IQueryable`1 superset, Int32 pageNumber, Int32 pageSize, Nullable`1 totalSetCount)
+   at HotelListing.Repository.GenericRepository`1.GetAllAsync(RequestParams requestParam) in C:\Users\Sokhibjon Zamonov\Documents\MyData\Udemy\ApiProjects\HotelListing\Repository\GenericRepository.cs:line 50
+   at HotelListing.Controllers.CountryController.WorldCountriesAsync(RequestParams requestParams) in C:\Users\Sokhibjon Zamonov\Documents\MyData\Udemy\ApiProjects\HotelListing\Controllers\CountryController.cs:line 32
+2023-03-03 16:26:13.109 +05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2023-03-03 16:26:13.124 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing) in 975.388ms
+2023-03-03 16:26:13.125 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:26:13.125 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=0&PageSize=10 - - - 500 - text/plain;+charset=utf-8 979.4657ms
+2023-03-03 16:26:20.371 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=1&PageSize=10 - -
+2023-03-03 16:26:20.371 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:26:20.372 +05:00 [INF] Route matched with {action = "WorldCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountriesAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:26:20.396 +05:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 16:26:20.425 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 16:26:20.426 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.WorldCountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 16:26:20.427 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing) in 55.037ms
+2023-03-03 16:26:20.427 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 16:26:20.428 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country/WorldCountries?PageNumber=1&PageSize=10 - - - 200 415 application/json;+charset=utf-8 57.4597ms
+2023-03-03 16:26:47.140 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country - -
+2023-03-03 16:26:47.155 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing)'
+2023-03-03 16:26:47.181 +05:00 [INF] Route matched with {action = "WorldCountryHotels", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountryHotelsAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:26:47.209 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 16:26:47.238 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 16:26:47.641 +05:00 [INF] Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:26:47.681 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:26:47.689 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:26:47.693 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:26:47.697 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:26:47.702 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:26:47.707 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:26:47.711 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:26:47.715 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:26:47.720 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:26:47.720 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.CountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 16:26:47.745 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing) in 563.6565ms
+2023-03-03 16:26:47.745 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing)'
+2023-03-03 16:26:47.746 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country - - - 200 535 application/json;+charset=utf-8 605.8862ms
+2023-03-03 16:27:08.764 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country?PageNumber=6&PageSize=10 - -
+2023-03-03 16:27:08.765 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing)'
+2023-03-03 16:27:08.765 +05:00 [INF] Route matched with {action = "WorldCountryHotels", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountryHotelsAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:27:08.787 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 16:27:08.810 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 16:27:08.818 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:08.822 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:08.825 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:08.905 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:08.913 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:08.922 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:08.936 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:08.945 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:08.952 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:08.968 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:08.969 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.CountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 16:27:08.984 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing) in 218.8679ms
+2023-03-03 16:27:08.985 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing)'
+2023-03-03 16:27:08.986 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country?PageNumber=6&PageSize=10 - - - 200 676 application/json;+charset=utf-8 220.9524ms
+2023-03-03 16:27:30.368 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country?PageNumber=7&PageSize=10 - -
+2023-03-03 16:27:30.376 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing)'
+2023-03-03 16:27:30.377 +05:00 [INF] Route matched with {action = "WorldCountryHotels", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountryHotelsAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:27:30.424 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 16:27:30.447 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 16:27:30.455 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:30.465 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:30.473 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:30.483 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:30.491 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:30.497 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:30.505 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:30.516 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:30.523 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:30.531 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:30.531 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.CountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 16:27:30.532 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing) in 155.7437ms
+2023-03-03 16:27:30.533 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing)'
+2023-03-03 16:27:30.533 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country?PageNumber=7&PageSize=10 - - - 200 556 application/json;+charset=utf-8 164.8784ms
+2023-03-03 16:27:41.256 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country?PageNumber=8&PageSize=10 - -
+2023-03-03 16:27:41.258 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing)'
+2023-03-03 16:27:41.258 +05:00 [INF] Route matched with {action = "WorldCountryHotels", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountryHotelsAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:27:41.271 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 16:27:41.297 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 16:27:41.313 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:41.318 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:41.322 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:41.326 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:41.329 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:41.333 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:41.340 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:41.343 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:41.347 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:41.352 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:41.353 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.CountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 16:27:41.354 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing) in 95.5546ms
+2023-03-03 16:27:41.354 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing)'
+2023-03-03 16:27:41.355 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country?PageNumber=8&PageSize=10 - - - 200 545 application/json;+charset=utf-8 98.5445ms
+2023-03-03 16:27:54.079 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country?PageNumber=10&PageSize=10 - -
+2023-03-03 16:27:54.080 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing)'
+2023-03-03 16:27:54.080 +05:00 [INF] Route matched with {action = "WorldCountryHotels", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountryHotelsAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 16:27:54.128 +05:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 16:27:54.165 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 16:27:54.183 +05:00 [INF] Executed DbCommand (14ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:54.190 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:54.198 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:54.201 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:54.206 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:54.213 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:54.217 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:54.222 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:54.230 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:54.234 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 16:27:54.234 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.CountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 16:27:54.235 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing) in 154.855ms
+2023-03-03 16:27:54.235 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing)'
+2023-03-03 16:27:54.236 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country?PageNumber=10&PageSize=10 - - - 200 565 application/json;+charset=utf-8 157.1949ms
+2023-03-03 22:38:08.795 +05:00 [INF] User profile is available. Using 'C:\Users\Sokhibjon Zamonov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-03-03 22:38:09.616 +05:00 [INF] Now listening on: https://localhost:7294
+2023-03-03 22:38:09.620 +05:00 [INF] Now listening on: http://localhost:5281
+2023-03-03 22:38:09.625 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-03 22:38:09.625 +05:00 [INF] Hosting environment: Development
+2023-03-03 22:38:09.626 +05:00 [INF] Content root path: C:\Users\Sokhibjon Zamonov\Documents\MyData\Udemy\ApiProjects\HotelListing
+2023-03-03 22:38:11.711 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/swagger/index.html - -
+2023-03-03 22:38:12.911 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/swagger/index.html - - - 200 - text/html;charset=utf-8 1197.0432ms
+2023-03-03 22:38:12.968 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/_framework/aspnetcore-browser-refresh.js - -
+2023-03-03 22:38:12.968 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/_vs/browserLink - -
+2023-03-03 22:38:12.992 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 22.1778ms
+2023-03-03 22:38:13.234 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 264.5414ms
+2023-03-03 22:38:13.612 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/swagger/v1/swagger.json - -
+2023-03-03 22:38:14.466 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 853.6109ms
+2023-03-03 22:38:26.935 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country/-1 - -
+2023-03-03 22:38:27.083 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.GetCountryByIdAsync (HotelListing)'
+2023-03-03 22:38:27.188 +05:00 [INF] Route matched with {action = "GetCountryById", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountryByIdAsync(Int32) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 22:38:36.123 +05:00 [INF] Executed DbCommand (294ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__id_0
+2023-03-03 22:38:36.266 +05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-03-03 22:38:36.645 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.GetCountryByIdAsync (HotelListing) in 9443.7774ms
+2023-03-03 22:38:36.647 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.GetCountryByIdAsync (HotelListing)'
+2023-03-03 22:38:36.679 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country/-1 - - - 404 161 application/problem+json;+charset=utf-8 9743.3335ms
+2023-03-03 22:39:00.512 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Country/-1 - -
+2023-03-03 22:39:00.532 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.GetCountryByIdAsync (HotelListing)'
+2023-03-03 22:39:00.534 +05:00 [INF] Route matched with {action = "GetCountryById", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountryByIdAsync(Int32) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 22:39:01.021 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__id_0
+2023-03-03 22:39:01.025 +05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-03-03 22:39:01.027 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.GetCountryByIdAsync (HotelListing) in 492.5752ms
+2023-03-03 22:39:01.027 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.GetCountryByIdAsync (HotelListing)'
+2023-03-03 22:39:01.029 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Country/-1 - - - 404 161 application/problem+json;+charset=utf-8 516.2459ms
+2023-03-03 22:39:25.082 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Hotel?PageNumber=1&PageSize=5 - -
+2023-03-03 22:39:25.093 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.AllHotelsAsync (HotelListing)'
+2023-03-03 22:39:25.152 +05:00 [INF] Route matched with {action = "AllHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AllHotelsAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.HotelController (HotelListing).
+2023-03-03 22:39:25.356 +05:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+2023-03-03 22:39:25.682 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-03-03 22:39:25.685 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-03-03 22:39:25.711 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 22:39:25.920 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__p_0
+2023-03-03 22:39:26.118 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__p_0
+2023-03-03 22:39:26.126 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__p_0
+2023-03-03 22:39:26.133 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__p_0
+2023-03-03 22:39:26.135 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 22:39:26.181 +05:00 [INF] Executed action HotelListing.Controllers.HotelController.AllHotelsAsync (HotelListing) in 1028.7937ms
+2023-03-03 22:39:26.181 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.AllHotelsAsync (HotelListing)'
+2023-03-03 22:39:26.182 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Hotel?PageNumber=1&PageSize=5 - - - 200 626 application/json;+charset=utf-8 1100.2321ms
+2023-03-03 22:40:03.171 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Hotel/-1 - -
+2023-03-03 22:40:03.172 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotelByIdAsync (HotelListing)'
+2023-03-03 22:40:03.193 +05:00 [INF] Route matched with {action = "GetHotelById", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotelByIdAsync(Int32) on controller HotelListing.Controllers.HotelController (HotelListing).
+2023-03-03 22:40:03.261 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[Id] = @__id_0
+2023-03-03 22:40:03.263 +05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-03-03 22:40:03.264 +05:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotelByIdAsync (HotelListing) in 71.6673ms
+2023-03-03 22:40:03.265 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotelByIdAsync (HotelListing)'
+2023-03-03 22:40:03.265 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Hotel/-1 - - - 404 161 application/problem+json;+charset=utf-8 93.5597ms
+2023-03-03 22:40:33.012 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/api/Hotel?PageNumber=0&PageSize=5 - -
+2023-03-03 22:40:33.013 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.AllHotelsAsync (HotelListing)'
+2023-03-03 22:40:33.013 +05:00 [INF] Route matched with {action = "AllHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AllHotelsAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.HotelController (HotelListing).
+2023-03-03 22:40:33.021 +05:00 [INF] Executed action HotelListing.Controllers.HotelController.AllHotelsAsync (HotelListing) in 8.1836ms
+2023-03-03 22:40:33.023 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.AllHotelsAsync (HotelListing)'
+2023-03-03 22:40:33.030 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'pageNumber = 0. PageNumber cannot be below 1.')
+   at X.PagedList.PagedListExtensions.ToPagedListAsync[T](IQueryable`1 superset, Int32 pageNumber, Int32 pageSize, Nullable`1 totalSetCount, CancellationToken cancellationToken)
+   at X.PagedList.PagedListExtensions.ToPagedListAsync[T](IQueryable`1 superset, Int32 pageNumber, Int32 pageSize, Nullable`1 totalSetCount)
+   at HotelListing.Repository.GenericRepository`1.GetAllAsync(RequestParams requestParam) in C:\Users\Sokhibjon Zamonov\Documents\MyData\Udemy\ApiProjects\HotelListing\Repository\GenericRepository.cs:line 50
+   at HotelListing.Controllers.HotelController.AllHotelsAsync(RequestParams requestParams) in C:\Users\Sokhibjon Zamonov\Documents\MyData\Udemy\ApiProjects\HotelListing\Controllers\HotelController.cs:line 31
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-03-03 22:40:33.144 +05:00 [ERR] Something went wrong: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'pageNumber = 0. PageNumber cannot be below 1.')
+   at X.PagedList.PagedListExtensions.ToPagedListAsync[T](IQueryable`1 superset, Int32 pageNumber, Int32 pageSize, Nullable`1 totalSetCount, CancellationToken cancellationToken)
+   at X.PagedList.PagedListExtensions.ToPagedListAsync[T](IQueryable`1 superset, Int32 pageNumber, Int32 pageSize, Nullable`1 totalSetCount)
+   at HotelListing.Repository.GenericRepository`1.GetAllAsync(RequestParams requestParam) in C:\Users\Sokhibjon Zamonov\Documents\MyData\Udemy\ApiProjects\HotelListing\Repository\GenericRepository.cs:line 50
+   at HotelListing.Controllers.HotelController.AllHotelsAsync(RequestParams requestParams) in C:\Users\Sokhibjon Zamonov\Documents\MyData\Udemy\ApiProjects\HotelListing\Controllers\HotelController.cs:line 31
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-03-03 22:40:33.156 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/api/Hotel?PageNumber=0&PageSize=5 - - - 500 - application/json 143.7179ms
+2023-03-03 22:40:47.751 +05:00 [INF] Application is shutting down...
+2023-03-03 23:21:24.505 +05:00 [INF] User profile is available. Using 'C:\Users\Sokhibjon Zamonov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-03-03 23:21:25.132 +05:00 [INF] Now listening on: https://localhost:7294
+2023-03-03 23:21:25.133 +05:00 [INF] Now listening on: http://localhost:5281
+2023-03-03 23:21:25.137 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-03 23:21:25.140 +05:00 [INF] Hosting environment: Development
+2023-03-03 23:21:25.141 +05:00 [INF] Content root path: C:\Users\Sokhibjon Zamonov\Documents\MyData\Udemy\ApiProjects\HotelListing
+2023-03-03 23:21:25.974 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/swagger/index.html - -
+2023-03-03 23:21:26.996 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/swagger/index.html - - - 200 - text/html;charset=utf-8 1035.5160ms
+2023-03-03 23:21:27.101 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/_framework/aspnetcore-browser-refresh.js - -
+2023-03-03 23:21:27.101 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/_vs/browserLink - -
+2023-03-03 23:21:27.124 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 20.2502ms
+2023-03-03 23:21:27.292 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 190.5853ms
+2023-03-03 23:21:27.767 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/swagger/v1/swagger.json - -
+2023-03-03 23:21:28.247 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Country" for actions - HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing),HotelListing.Controllers.CountryV1_1Controller.GetAllCountries (HotelListing). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-03-03 23:21:28.356 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 588.7378ms
+2023-03-03 23:22:47.364 +05:00 [INF] Application is shutting down...
+2023-03-03 23:23:09.369 +05:00 [INF] User profile is available. Using 'C:\Users\Sokhibjon Zamonov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-03-03 23:23:11.166 +05:00 [INF] Now listening on: https://localhost:7294
+2023-03-03 23:23:11.167 +05:00 [INF] Now listening on: http://localhost:5281
+2023-03-03 23:23:11.172 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-03 23:23:11.172 +05:00 [INF] Hosting environment: Development
+2023-03-03 23:23:11.173 +05:00 [INF] Content root path: C:\Users\Sokhibjon Zamonov\Documents\MyData\Udemy\ApiProjects\HotelListing
+2023-03-03 23:23:14.207 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/swagger/index.html - -
+2023-03-03 23:23:15.819 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/swagger/index.html - - - 200 - text/html;charset=utf-8 1622.2798ms
+2023-03-03 23:23:16.034 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/_framework/aspnetcore-browser-refresh.js - -
+2023-03-03 23:23:16.062 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/_vs/browserLink - -
+2023-03-03 23:23:16.094 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 60.2493ms
+2023-03-03 23:23:16.473 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 410.7401ms
+2023-03-03 23:23:16.812 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/swagger/v1/swagger.json - -
+2023-03-03 23:23:17.442 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Country" for actions - HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing),HotelListing.Controllers.CountryV1_1Controller.GetAllCountries (HotelListing). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-03-03 23:23:17.591 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 778.8816ms
+2023-03-03 23:25:44.577 +05:00 [INF] User profile is available. Using 'C:\Users\Sokhibjon Zamonov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-03-03 23:25:45.279 +05:00 [INF] Now listening on: https://localhost:7294
+2023-03-03 23:25:45.280 +05:00 [INF] Now listening on: http://localhost:5281
+2023-03-03 23:25:45.289 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-03 23:25:45.291 +05:00 [INF] Hosting environment: Development
+2023-03-03 23:25:45.291 +05:00 [INF] Content root path: C:\Users\Sokhibjon Zamonov\Documents\MyData\Udemy\ApiProjects\HotelListing
+2023-03-03 23:25:46.654 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/swagger/index.html - -
+2023-03-03 23:25:48.531 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/swagger/index.html - - - 200 - text/html;charset=utf-8 1875.4253ms
+2023-03-03 23:25:48.564 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/_vs/browserLink - -
+2023-03-03 23:25:48.596 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/_framework/aspnetcore-browser-refresh.js - -
+2023-03-03 23:25:48.621 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 21.3237ms
+2023-03-03 23:25:48.986 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 421.9978ms
+2023-03-03 23:25:49.818 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/swagger/v1/swagger.json - -
+2023-03-03 23:25:50.437 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Country/WorldCountries" for actions - HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing),HotelListing.Controllers.CountryV1_1Controller.GetAllCountries (HotelListing). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-03-03 23:25:50.485 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 666.5762ms
+2023-03-03 23:26:24.832 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7294/api/Country - -
+2023-03-03 23:26:25.431 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '2/27/2023 4:57:04 PM', Current time: '3/3/2023 6:26:25 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-03-03 23:26:25.445 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '2/27/2023 4:57:04 PM', Current time: '3/3/2023 6:26:25 PM'.
+2023-03-03 23:26:25.472 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing)'
+2023-03-03 23:26:25.614 +05:00 [INF] Route matched with {action = "WorldCountryHotels", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountryHotelsAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 23:26:41.613 +05:00 [INF] Executed DbCommand (439ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 23:26:42.435 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-03-03 23:26:42.438 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-03-03 23:26:42.680 +05:00 [INF] Executed DbCommand (166ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 23:26:43.334 +05:00 [INF] Executed DbCommand (37ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:26:43.373 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:26:43.380 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:26:43.386 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:26:43.397 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:26:43.403 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:26:43.407 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:26:43.413 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:26:43.418 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:26:43.423 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:26:43.452 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.CountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 23:26:43.925 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing) in 18284.8066ms
+2023-03-03 23:26:43.929 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountryHotelsAsync (HotelListing)'
+2023-03-03 23:26:43.968 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7294/api/Country - - - 200 535 application/json;+charset=utf-8 19136.1418ms
+2023-03-03 23:27:37.430 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7294/api/Country/WorldCountries - -
+2023-03-03 23:27:37.448 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '2/27/2023 4:57:04 PM', Current time: '3/3/2023 6:27:37 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-03-03 23:27:37.449 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '2/27/2023 4:57:04 PM', Current time: '3/3/2023 6:27:37 PM'.
+2023-03-03 23:27:37.450 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryV1_1Controller.GetAllCountries (HotelListing)'
+2023-03-03 23:27:37.471 +05:00 [INF] Route matched with {action = "GetAllCountries", controller = "CountryV1_"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCountries() on controller HotelListing.Controllers.CountryV1_1Controller (HotelListing).
+2023-03-03 23:27:37.808 +05:00 [INF] Executed DbCommand (66ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 23:27:37.937 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Data.Country, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 23:27:37.977 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:37.995 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.001 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.009 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.014 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.019 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.025 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.030 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.035 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.042 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.048 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.053 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.065 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.080 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.088 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.098 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.106 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.115 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.129 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.138 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.148 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.160 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.165 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.179 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.188 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.201 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.212 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.216 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.220 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.228 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.231 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.234 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.237 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.242 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.246 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.249 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.253 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.258 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.262 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.365 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.369 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.378 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.385 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.394 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.398 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.405 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.414 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.420 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.426 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.433 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.444 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.448 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.455 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.465 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.473 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.477 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.481 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.485 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.492 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.496 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.500 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.504 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.509 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.513 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.517 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.521 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.527 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.531 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.535 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.542 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.546 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.549 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.554 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.559 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.564 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.572 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.578 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.598 +05:00 [INF] Executed DbCommand (17ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.609 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.617 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.632 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.644 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.658 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.668 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.682 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.695 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.702 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.716 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.720 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.730 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.736 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.743 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.747 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.751 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.754 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.759 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.762 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.766 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.770 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.774 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.778 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.782 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.785 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.789 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.793 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.797 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.800 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.806 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.816 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.822 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.828 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.836 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.846 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.854 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.862 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.879 +05:00 [INF] Executed DbCommand (14ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.911 +05:00 [INF] Executed DbCommand (29ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.921 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.928 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.937 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.944 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.953 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.963 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.968 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.974 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.977 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.981 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.984 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.990 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.994 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:38.998 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.002 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.010 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.014 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.018 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.024 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.028 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.032 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.036 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.041 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.046 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.051 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.065 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.070 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.083 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.088 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.097 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.102 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.116 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.128 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.132 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.144 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.150 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.157 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.166 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.177 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.187 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.195 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.200 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.215 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.219 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.228 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.233 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.237 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.242 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.247 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.250 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.254 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.259 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.262 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.266 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.269 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.274 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.278 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.281 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.284 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.290 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.294 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.297 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.300 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.304 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.313 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.318 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.328 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.332 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.345 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.360 +05:00 [INF] Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.371 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.378 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.394 +05:00 [INF] Executed DbCommand (14ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.405 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.417 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.431 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.447 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.457 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.467 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.477 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.481 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.486 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.494 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.498 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.501 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.505 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.510 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.514 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.518 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.526 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.529 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.533 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.537 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.542 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.547 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.552 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.560 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.569 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.593 +05:00 [INF] Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.606 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.614 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.629 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.634 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.646 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.650 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.660 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.665 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.674 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.683 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.689 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.697 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.704 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.713 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.724 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.728 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.731 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.734 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.740 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.744 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.747 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.750 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.755 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.759 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.762 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.766 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[CountryId] = @__p_0
+2023-03-03 23:27:39.769 +05:00 [INF] Executed action HotelListing.Controllers.CountryV1_1Controller.GetAllCountries (HotelListing) in 2297.8388ms
+2023-03-03 23:27:39.769 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryV1_1Controller.GetAllCountries (HotelListing)'
+2023-03-03 23:27:39.772 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7294/api/Country/WorldCountries - - - 200 13862 application/json;+charset=utf-8 2341.8250ms
+2023-03-03 23:27:57.445 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7294/api/Country/WorldCountries - -
+2023-03-03 23:27:57.458 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '2/27/2023 4:57:04 PM', Current time: '3/3/2023 6:27:57 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-03-03 23:27:57.459 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '2/27/2023 4:57:04 PM', Current time: '3/3/2023 6:27:57 PM'.
+2023-03-03 23:27:57.459 +05:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 23:27:57.475 +05:00 [INF] Route matched with {action = "WorldCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] WorldCountriesAsync(HotelListing.Data.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2023-03-03 23:27:57.596 +05:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+2023-03-03 23:27:57.620 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Code], [c].[Name]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-03-03 23:27:57.637 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.DTOs.WorldCountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 23:27:57.648 +05:00 [INF] Executed action HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing) in 172.7349ms
+2023-03-03 23:27:57.648 +05:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing)'
+2023-03-03 23:27:57.649 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7294/api/Country/WorldCountries - - - 200 415 application/json;+charset=utf-8 204.3714ms
+2023-03-03 23:30:49.731 +05:00 [INF] Application is shutting down...
+2023-03-03 23:46:26.098 +05:00 [INF] User profile is available. Using 'C:\Users\Sokhibjon Zamonov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-03-03 23:46:26.818 +05:00 [INF] Now listening on: https://localhost:7294
+2023-03-03 23:46:26.819 +05:00 [INF] Now listening on: http://localhost:5281
+2023-03-03 23:46:26.823 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-03 23:46:26.823 +05:00 [INF] Hosting environment: Development
+2023-03-03 23:46:26.824 +05:00 [INF] Content root path: C:\Users\Sokhibjon Zamonov\Documents\MyData\Udemy\ApiProjects\HotelListing
+2023-03-03 23:46:27.855 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/swagger/index.html - -
+2023-03-03 23:46:28.895 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/swagger/index.html - - - 200 - text/html;charset=utf-8 1050.5003ms
+2023-03-03 23:46:28.987 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/_framework/aspnetcore-browser-refresh.js - -
+2023-03-03 23:46:29.014 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/_vs/browserLink - -
+2023-03-03 23:46:29.018 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 28.1988ms
+2023-03-03 23:46:29.197 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 183.2240ms
+2023-03-03 23:46:29.747 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7294/swagger/v1/swagger.json - -
+2023-03-03 23:46:30.425 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Country/WorldCountries" for actions - HotelListing.Controllers.CountryController.WorldCountriesAsync (HotelListing),HotelListing.Controllers.CountryV1_1Controller.GetAllCountries (HotelListing). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-03-03 23:46:30.503 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7294/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 756.1650ms

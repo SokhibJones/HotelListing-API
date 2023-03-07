@@ -1,9 +1,11 @@
+using AspNetCoreRateLimit;
 using HotelListing;
 using HotelListing.Configurations;
 using HotelListing.Data;
 using HotelListing.IRepository;
 using HotelListing.Repository;
 using HotelListing.Services;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Serilog;
@@ -17,21 +19,44 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseLazyLoadingProxies().UseSqlServer(connectionString);
 });
 
+builder.Services.AddMemoryCache();
+builder.Services.ConfigureRateLimiting();
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.ConfigureHttpCacheHeaders();
+
 // Configuring authentication and identity services
 //builder.Services.AddAuthentication();
 builder.Services.ConfigureIdentity();
 builder.Services.ConfigureJwt(builder.Configuration);
+
+builder.Services.ConfigureVersioning();
 
 builder.Services.AddAutoMapper(typeof(MapperInitializer));
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IAuthManager, AuthManager>();
 
-builder.Services.AddControllers().AddNewtonsoftJson(option => option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+builder.Services.AddControllers(options =>
+{
+    options.CacheProfiles.Add("2MinutesDuration", new Microsoft.AspNetCore.Mvc.CacheProfile
+    {
+        Duration = 120
+    });
+}).AddNewtonsoftJson(option => option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// Add ApiExplorer to discover versions
+builder.Services.AddVersionedApiExplorer(setup =>
+{
+    setup.GroupNameFormat = "'v'VVV";
+    setup.SubstituteApiVersionInUrl = true;
+});
+
 builder.Services.AddEndpointsApiExplorer();
 //builder.Services.AddSwaggerGen();
 builder.Services.AddSwaggerDoc();
+builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
 
 // Serilog configuration
 string logFilesPath = "LogFiles\\log-.txt";
@@ -57,16 +82,31 @@ builder.Services.AddCors(option =>
 
 var app = builder.Build();
 
+var apiVersionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options =>
+    {
+        foreach (var description in apiVersionDescriptionProvider.ApiVersionDescriptions)
+        {
+            options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json",
+                description.GroupName.ToUpperInvariant());
+        }
+    });
 }
+
+app.ConfigureExceptionHandler();
 
 app.UseHttpsRedirection();
 
 app.UseCors(policyName: "AllowAll");
+
+app.UseResponseCaching();
+app.UseHttpCacheHeaders();
+app.UseIpRateLimiting();
 
 app.UseAuthentication();
 app.UseAuthorization();

@@ -2,6 +2,7 @@
 using HotelListing.IRepository;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
+using X.PagedList;
 
 namespace HotelListing.Repository
 {
@@ -42,6 +43,11 @@ namespace HotelListing.Repository
             }
 
             return await query.ToListAsync();
+        }
+
+        public async Task<IPagedList<T>> GetAllAsync(RequestParams requestParam)
+        {
+            return await dbSet.ToPagedListAsync(pageNumber: requestParam.PageNumber, pageSize: requestParam.PageSize);
         }
 
         public async Task<T?> GetAsync(Expression<Func<T, bool>> predicate)

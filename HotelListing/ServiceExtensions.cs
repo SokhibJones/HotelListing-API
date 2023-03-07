@@ -1,8 +1,15 @@
-﻿using HotelListing.Data;
+﻿using AspNetCoreRateLimit;
+using HotelListing.Data;
+using Marvin.Cache.Headers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Serilog;
 using System.Text;
 
 namespace HotelListing
@@ -75,8 +82,80 @@ namespace HotelListing
                     }
                 });
 
-                option.SwaggerDoc("v1", new OpenApiInfo { Title = "HotelListing", Version = "v1" });
+                //option.SwaggerDoc("v1", new OpenApiInfo { Title = "HotelListing", Version = "v1" });
             });
+        }
+
+        public static void ConfigureExceptionHandler(this IApplicationBuilder builder)
+        {
+            builder.UseExceptionHandler(options =>
+            {
+                options.Run(async context =>
+                {
+                    context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+                    context.Response.ContentType = "application/json";
+
+                    var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
+                    if (contextFeature is not null)
+                    {
+                        Log.Error($"Something went wrong: {contextFeature.Error}");
+                        var error = new Error
+                        {
+                            StatusCode = context.Response.StatusCode,
+                            Message = "Internal Server Error. Please try later."
+                        };
+                        await context.Response.WriteAsync(error.ToString());
+                    }
+                });
+            });
+        }
+
+        public static void ConfigureVersioning(this IServiceCollection services)
+        {
+            services.AddApiVersioning(options =>
+            {
+                options.ReportApiVersions = true;
+                options.AssumeDefaultVersionWhenUnspecified = true;
+                options.DefaultApiVersion = new ApiVersion(1, 0);
+                options.ApiVersionReader = new HeaderApiVersionReader("api-version");
+            });
+        }
+
+        public static void ConfigureHttpCacheHeaders(this IServiceCollection services)
+        {
+            services.AddResponseCaching();
+            services.AddHttpCacheHeaders(
+            expirationOptions =>
+            {
+                expirationOptions.MaxAge = 120;
+                expirationOptions.CacheLocation = CacheLocation.Private;
+            },
+            validationOptions =>
+            {
+                validationOptions.MustRevalidate = true;
+            });
+        }
+
+        public static void ConfigureRateLimiting(this IServiceCollection services)
+        {
+            var rateLimitingRules = new List<RateLimitRule>
+            {
+                new RateLimitRule
+                {
+                    Endpoint = "*",
+                    Limit = 1,
+                    PeriodTimespan = TimeSpan.FromSeconds(5)
+                }
+            };
+            services.Configure<IpRateLimitOptions>(options =>
+            {
+                options.GeneralRules = rateLimitingRules;
+            });
+            
+            services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
+            services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
+            services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+            services.AddSingleton<IProcessingStrategy, AsyncKeyLockProcessingStrategy>();
         }
     }
 }
