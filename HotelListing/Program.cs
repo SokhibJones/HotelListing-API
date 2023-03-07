@@ -1,13 +1,12 @@
-using AspNetCoreRateLimit;
-using HotelListing;
-using HotelListing.Configurations;
+using HotelListing.Core;
 using HotelListing.Data;
-using HotelListing.IRepository;
-using HotelListing.Repository;
-using HotelListing.Services;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
+using HotelListing.Core.IRepository;
+using HotelListing.Core.Repository;
+using HotelListing.Core.Services;
+using HotelListing.Core.Configurations;
+using AspNetCoreRateLimit;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);

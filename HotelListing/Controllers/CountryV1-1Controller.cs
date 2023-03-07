@@ -1,5 +1,4 @@
-﻿using HotelListing.IRepository;
-using Microsoft.AspNetCore.Http;
+﻿using HotelListing.Core.IRepository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelListing.Controllers

@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
+using HotelListing.Core.DTOs;
+using HotelListing.Core.Models;
+using HotelListing.Core.Services;
 using HotelListing.Data;
-using HotelListing.DTOs;
-using HotelListing.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -29,7 +29,7 @@ namespace HotelListing.Controllers
         [ProducesResponseType(StatusCodes.Status202Accepted)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> RegisterAsync([FromBody]UserRegisterDTO userDTO)
+        public async Task<IActionResult> RegisterAsync([FromBody] UserRegisterDTO userDTO)
         {
             logger.LogInformation($"Registration attempt for {userDTO.Email}");
             if (!ModelState.IsValid)
@@ -72,7 +72,19 @@ namespace HotelListing.Controllers
                 return Unauthorized();
             }
 
-            return Accepted(new { Token = await authManager.CreateTokenAsync() });
+            return Accepted(new TokenRequest { Token = await authManager.CreateTokenAsync(), RefreshToken = await authManager.CreateRefreshTokenAsync() });
+        }
+
+        [HttpPost("RefreshToken")]
+        public async Task<IActionResult> RefreshToken([FromBody] TokenRequest tokenRequest)
+        {
+            var result = await authManager.VerifyRefreshTokenAsync(tokenRequest);
+            if (result is null)
+            {
+                return Unauthorized();
+            }
+
+            return Ok(tokenRequest);
         }
     }
 }
